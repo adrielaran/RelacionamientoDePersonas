@@ -2,9 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
-    <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
-    <!--  All snippets are MIT license http://bootdey.com/license -->
-    <title>light contact list - Bootdey.com</title>
+    <title>Panel de Control</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -14,7 +12,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
 <div class="container">
 	<div th:each="usuario:${usuarioActual}">
-	<h2 style="color:white" th:text="'Panel de Control | Bienvenido ' + ${usuario.nombre}"></h2>
+	<h2 style="color:white" th:text="'Panel de Control | Bienvenido 's + ${usuario.nombre}"></h2>
 	</div>
 
 	<table>

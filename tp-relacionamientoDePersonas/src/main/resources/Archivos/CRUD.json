@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "46103680-a87d-4a64-9a74-17d8aa751f65",
+		"name": "Personas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Personas",
+			"item": [
+				{
+					"name": "Crear Personas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\":1,\n        \"nombre\": \"Adriel\",\n        \"telefono\": \"1164672090\",\n        \"email\": \"adrielaranaa@gmail.com\",\n        \"ciudad\": \"Buenos Aires\",\n        \"nacimiento\":\"04-08-00\",\n        \"localidad\": \"Tres de Febrero\"\n    },\n    {\n         \"id\":2,\n        \"nombre\": \"Tomas\",\n        \"telefono\": \"1164672390\",\n        \"email\": \"tomas@gmail.com\",\n        \"ciudad\": \"Buenos Aires\",\n        \"nacimiento\":\"04-08-00\",\n        \"localidad\": \"San Martin\"\n    },\n    {\n        \"id\":3,\n        \"nombre\": \"Nicolas\",\n        \"telefono\": \"1164672390\",\n        \"email\": \"Nicolas@gmail.com\",\n        \"ciudad\": \"Buenos Aires\",\n        \"nacimiento\":\"04-08-00\",\n        \"localidad\": \"La Matanza\"\n    },\n    {\n        \"id\":4,\n        \"nombre\": \"Palermo\",\n        \"telefono\": \"1164672390\",\n        \"email\": \"Palermo@gmail.com\",\n        \"ciudad\": \"Buenos Aires\",\n        \"nacimiento\":\"04-08-02\",\n        \"localidad\": \"Tigre\"\n    }\n]"
+						},
+						"url": {
+							"raw": "localhost:8080/personas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Personas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"razonSocial\": \"IBM\",\n    \"tipoOrg\": \"EMPRESA\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/organizacion",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"organizacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Persona",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"razonSocial\": \"Koibanx\",\r\n    \"tipoOrg\": \"EMPRESA\",\r\n    \"ubicacion\": {\r\n        \"latitud\": \"-01.423\",\r\n        \"longitud\": \"86.321\",\r\n        \"direccion\": \"Av. Libertador 101\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/organizacion/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"organizacion",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "c1a38384-5dc1-4736-8a20-aca5f05ea0a7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Persona",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/organizacion/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"organizacion",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "fb265406-5db8-42a3-8138-fd1cac55854c"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
